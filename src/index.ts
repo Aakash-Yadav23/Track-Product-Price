@@ -28,9 +28,8 @@ cron.schedule('0 * * * *', () => {
 });
 
 
-// initializePrices();
+initializePrices();
 
-// Basic route
 app.get("/", (req, res) => {
     res.json("OK!");
 });
