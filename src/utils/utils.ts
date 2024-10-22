@@ -69,9 +69,9 @@ export const authAndGetToken = async () => {
 };
 
 
-export const fetchProduct = async (page: number = 1) => {
+export const fetchProduct = async (page: number = 1,limit:number=20) => {
     try {
-        const res = await axios.get(`${process.env.PRODUCT_API!}/search?page=${page}`);
+        const res = await axios.get(`${process.env.PRODUCT_API!}/search?page=${page},limit=${limit}`);
         if (res.data.data) {
             return res.data.data;
         }
